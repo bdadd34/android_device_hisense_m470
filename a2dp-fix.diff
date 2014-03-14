@@ -7,7 +7,7 @@ diff --git a/frameworks/av/media/libmediaplayerservice/MediaPlayerService.cpp b/
 index cd052e6..4d94314 100644
 --- a/frameworks/av/media/libmediaplayerservice/MediaPlayerService.cpp
 +++ b/frameworks/av/media/libmediaplayerservice/MediaPlayerService.cpp
-@@ -2156,6 +2156,10 @@ void MediaPlayerService::addBatteryData(uint32_t params)
+@@ -2177,6 +2177,10 @@ void MediaPlayerService::addBatteryData(uint32_t params)
  }
  
  status_t MediaPlayerService::pullBatteryData(Parcel* reply) {

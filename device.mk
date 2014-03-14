@@ -109,6 +109,10 @@ include vendor/hisense/m470/device-vendor.mk
 
 #$(call inherit-product-if-exists, vendor/hisense/m470/device-vendor.mk)
 
+PRODUCT_PACKAGES += \
+    charger \
+    charger_res_images
+
 # NFC packages
 PRODUCT_PACKAGES += \
     nfc_nci.m470 \

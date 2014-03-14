@@ -7,10 +7,10 @@ Date:   Sun Mar 02 22:13:30 2014 -0500
     libnvaviparserhal.so from loading; also, remove access to
     Nvidia's HE-AAC+ codec which remains broken
 
-diff --git a/frameworks/av/include/stagefright/MediaDefs.h b/frameworks/av/include/stagefright/MediaDefs.h
+diff --git a/frameworks/av/include/media/stagefright/MediaDefs.h b/frameworks/av/include/media/stagefright/MediaDefs.h
 index 85693d4..fcbca98 100644
---- a/frameworks/av/include/stagefright/MediaDefs.h
-+++ b/frameworks/av/include/stagefright/MediaDefs.h
+--- a/frameworks/av/include/media/stagefright/MediaDefs.h
++++ b/frameworks/av/include/media/stagefright/MediaDefs.h
 @@ -20,6 +20,8 @@
  
  namespace android {
@@ -46,42 +46,4 @@ index 85693d4..fcbca98 100644
  
  extern const char *MEDIA_MIMETYPE_TEXT_3GPP;
  extern const char *MEDIA_MIMETYPE_TEXT_SUBRIP;
-diff --git a/frameworks/av/media/libstagefright/MediaDefs.cpp b/frameworks/av/media/libstagefright/MediaDefs.cpp
-index b5d4e44..f97321d 100644
---- a/frameworks/av/media/libstagefright/MediaDefs.cpp
-+++ b/frameworks/av/media/libstagefright/MediaDefs.cpp
-@@ -18,6 +18,8 @@
- 
- namespace android {
- 
-+// DoPa (2014/02/26) - added codecs needed by Nvidia blobs
-+
- const char *MEDIA_MIMETYPE_IMAGE_JPEG = "image/jpeg";
- 
- const char *MEDIA_MIMETYPE_VIDEO_VP8 = "video/x-vnd.on2.vp8";
-@@ -27,6 +29,8 @@ const char *MEDIA_MIMETYPE_VIDEO_MPEG4 = "video/mp4v-es";
- const char *MEDIA_MIMETYPE_VIDEO_H263 = "video/3gpp";
- const char *MEDIA_MIMETYPE_VIDEO_MPEG2 = "video/mpeg2";
- const char *MEDIA_MIMETYPE_VIDEO_RAW = "video/raw";
-+const char *MEDIA_MIMETYPE_VIDEO_WMV = "video/wmv";         // Nvidia
-+const char *MEDIA_MIMETYPE_VIDEO_MJPEG = "video/mjpeg";     // Nvidia
- 
- const char *MEDIA_MIMETYPE_AUDIO_AMR_NB = "audio/3gpp";
- const char *MEDIA_MIMETYPE_AUDIO_AMR_WB = "audio/amr-wb";
-@@ -42,6 +46,8 @@ const char *MEDIA_MIMETYPE_AUDIO_RAW = "audio/raw";
- const char *MEDIA_MIMETYPE_AUDIO_FLAC = "audio/flac";
- const char *MEDIA_MIMETYPE_AUDIO_AAC_ADTS = "audio/aac-adts";
- const char *MEDIA_MIMETYPE_AUDIO_MSGSM = "audio/gsm";
-+const char *MEDIA_MIMETYPE_AUDIO_WMA = "audio/x-ms-wma";    // Nvidia
-+const char *MEDIA_MIMETYPE_AUDIO_AC3 = "audio/ac3";         // Nvidia
- 
- const char *MEDIA_MIMETYPE_CONTAINER_MPEG4 = "video/mp4";
- const char *MEDIA_MIMETYPE_CONTAINER_WAV = "audio/x-wav";
-@@ -52,6 +58,7 @@ const char *MEDIA_MIMETYPE_CONTAINER_AVI = "video/avi";
- const char *MEDIA_MIMETYPE_CONTAINER_MPEG2PS = "video/mp2p";
- 
- const char *MEDIA_MIMETYPE_CONTAINER_WVM = "video/wvm";
-+const char *MEDIA_MIMETYPE_CONTAINER_ASF = "video/x-ms-asf";    //Nvidia
- 
- const char *MEDIA_MIMETYPE_TEXT_3GPP = "text/3gpp-tt";
- const char *MEDIA_MIMETYPE_TEXT_SUBRIP = "application/x-subrip";
+
