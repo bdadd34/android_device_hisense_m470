@@ -66,7 +66,6 @@ TARGET_KERNEL_SOURCE := kernel/hisense/m470bsa
 TARGET_KERNEL_CONFIG := newgummy_m470_defconfig
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
 
-
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/hisense/m470/bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -86,6 +85,7 @@ BOARD_WLAN_DEVICE                := bcmdhd
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/system/vendor/firmware/fw_bcmdhd_apsta.bin"
+BOARD_WIFI_SKIP_CAPABILITIES     := true
 
 # Sensors invensense
 BOARD_USES_GENERIC_INVENSENSE := false
