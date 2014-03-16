@@ -44,6 +44,7 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := true
+BOARD_USES_LEGACY_ALSA_AUDIO := true
 BOARD_USES_TINY_AUDIO := true
 
 # Sense 4.5 / Sense 5 audio.primary blob support. See: include/hardware/audio.h
@@ -56,14 +57,13 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 6567231488
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 BOARD_HAL_STATIC_LIBRARIES := \
-    libdumpstate.m470 \
-    libhealthd.m470
+    libdumpstate.m470
 
 # Kernel
 #TARGET_PREBUILT_KERNEL := device/hisense/m470/prebuilt/kernel/kernel
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
-TARGET_KERNEL_SOURCE := kernel/hisense/m470bsa
-TARGET_KERNEL_CONFIG := newgummy_m470_defconfig
+TARGET_KERNEL_SOURCE := kernel/hisense/m470
+TARGET_KERNEL_CONFIG := m470_v2_dopa_defconfig
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
 
 # Bluetooth

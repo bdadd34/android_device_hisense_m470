@@ -98,7 +98,6 @@ PRODUCT_PACKAGES += \
     libbt-vendor \
     libdbus \
     libdumpstate.m470 \
-    libhealthd.m470 \
     librs_jni \
     libstagefrighthw \
     libtinyalsa \
