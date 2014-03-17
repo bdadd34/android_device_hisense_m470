@@ -1,0 +1,20 @@
+[
+  {
+    "remote": "gh",
+    "repository": "bdadd34/android_kernel_hisense_m470bsa",
+    "target_path": "kernel/hisense/m470",
+    "revision": "carbon"
+  },
+  {
+    "remote": "gh",
+    "repository": "bdadd34/android_device_hisense_m470",
+    "target_path": "device/hisense/m470",
+    "revision": "carbon"
+  },
+  {
+    "remote": "gh",
+    "repository": "bdadd34/proprietary_vendor_hisense",
+    "target_path": "vendor/hisense",
+    "revision": "cm-11"
+  }
+]
