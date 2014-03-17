@@ -31,6 +31,8 @@ PRODUCT_COPY_FILES += \
     device/hisense/m470/prebuilt/kernel/modules/mac80211.ko:system/lib/modules/mac80211.ko \
     device/hisense/m470/prebuilt/kernel/modules/raw_ip_net.ko:system/lib/modules/raw_ip_net.ko \
     device/hisense/m470/prebuilt/kernel/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
+    device/hisense/m470/prebuilt/kernel/modules/tcp_bic.ko:system/lib/modules/tcp_bic.ko \
+    device/hisense/m470/prebuilt/kernel/modules/tcp_htcp.ko:system/lib/modules/tcp_htcp.ko \
     device/hisense/m470/prebuilt/kernel/modules/tcrypt.ko:system/lib/modules/tcrypt.ko
 endif
 
