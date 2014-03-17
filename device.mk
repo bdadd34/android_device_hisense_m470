@@ -104,8 +104,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libtinyalsa \
     lights.m470 \
-    setup_fs \
-    wifimacwriter
+    setup_fs 
 
 # Include Proprietary files
 include vendor/hisense/m470/device-vendor.mk
