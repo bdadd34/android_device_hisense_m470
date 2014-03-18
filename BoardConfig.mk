@@ -43,9 +43,9 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
-BOARD_USES_ALSA_AUDIO := true
-BOARD_USES_LEGACY_ALSA_AUDIO := true
-BOARD_USES_TINY_AUDIO := true
+# BOARD_USES_ALSA_AUDIO := false
+# BOARD_USES_LEGACY_ALSA_AUDIO := false
+# BOARD_USES_TINY_AUDIO := false
 
 # Sense 4.5 / Sense 5 audio.primary blob support. See: include/hardware/audio.h
 BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
@@ -94,6 +94,12 @@ USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/hisense/m470/prebuilt/lib/egl/egl.cfg
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 BOARD_HAVE_PIXEL_FORMAT_INFO := true
+
+ifneq ($(HAVE_NVIDIA_PROP_SRC),false)
+# needed for source compilation of nvidia libraries
+-include vendor/nvidia/proprietary_src/build/definitions.mk
+-include vendor/nvidia/build/definitions.mk
+endif
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
